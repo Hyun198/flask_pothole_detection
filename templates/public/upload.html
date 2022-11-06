@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Upload</title>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="https://anyconv.com/ko/kml-to-gpx-byeonhwangi/">SERVICES</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <h1>Upload video</h1>
+            <hr>
+            <form action="/upload2" method="POST" enctype="multipart/form-data">
+                <input type="file" id="myFile" name="uploaded-file" accept=".mp4">
+                <input type="submit" value="제출">
+            </form>
+            <br>
+            <p style="color: white;">Choose video file to upload</p>
+        </div>
+    </div>
+
+
+</body>
+</html>

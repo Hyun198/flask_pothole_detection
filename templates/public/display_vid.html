@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="https://anyconv.com/ko/kml-to-gpx-byeonhwangi/">SERVICES</a></li>
+            </ul>
+        </nav>
+        <div class= "layer1">
+            <h1>Video</h1>
+            <video muted width="700" height="400" controls>
+                <source src="{{ upload_vid }}" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="layer2">
+            <h1>Map marker using folium marker</h1>
+            <iframe class="map", src="/map" width="900" height="800"></iframe>
+        </div>
+
+        <div class="layer3">
+            <h1>detection video</h1>
+            <video with="700" height="400" controls>
+                <source src="{{ url_for('static', filename='result_vid/project.mp4')}}" type="video/mp4">
+            </video>
+        </div>
+        
+        <br>
+
+        <div class="text-box2">
+            <a href="/gallery" class="btn" >GO</a>
+        </div>
+    </div>
+</body>
+</html>

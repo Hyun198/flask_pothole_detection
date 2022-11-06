@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Home</title>
+</head>
+<body>
+    <main>
+        {% block main %} 
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="https://anyconv.com/ko/kml-to-gpx-byeonhwangi/">SERVICES</a></li>
+                </ul>
+            </nav>
+            <div style ="width:1250px;"class="text-box">
+                <h1>Capstone team2 </h1><br>
+                <h2><span class="auto-input"></span></h2>
+                <br>
+                <p>You can see our project.</p>
+                <a href="/upload" class="btn" >START</a>
+            </div>
+            <img src="{{ url_for('static', filename='img_for_bg/camera_logo.png')}}" class="user-img">
+        </div>
+
+    
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typed = new Typed(".auto-input", {
+            strings: ["Knowledge Distillation","Pothole", "GPS data"],
+            typeSpeed: 50,
+            backSpeed: 100,
+            loop: true
+            })
+        </script>
+    {% endblock %}    
+</main>
+</body>
+</html>
