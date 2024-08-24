@@ -1,4 +1,4 @@
-For final project ver2
+for pull request
 # flask_pothole_detection_keras
 
 Same work https://github.com/Hyun198/2022_flask_yolo4.git
